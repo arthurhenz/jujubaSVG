@@ -30,8 +30,8 @@ internal fun RootApp() {
                             elementId = nodeInfo.id,
                             imageId = "nasa",
                             imageUrl = "https://i.imgur.com/LQIsf.jpeg",
-                            widthInPx = 100,
-                            heightInPx = 100,
+                            width = 100,
+                            height = 100,
                             coordinate = nodeInfo.coordinate,
                         ),
                         Command.RemoveNode(nodeInfo.id)

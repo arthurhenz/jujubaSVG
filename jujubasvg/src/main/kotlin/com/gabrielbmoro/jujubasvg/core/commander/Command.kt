@@ -7,31 +7,31 @@ public sealed class Command {
     /**
      * Update the background color of a node.
      * @param id The id of the node.
-     * @param colorInHex The color in hex.
+     * @param hexColor The color in hex.
      */
     public data class UpdateBackgroundColor(
         val id: String,
-        val colorInHex: String,
+        val hexColor: String,
     ) : Command()
 
     /**
      * Update the stroke color of a node.
      * @param id The id of the node.
-     * @param colorInHex The color in hex.
+     * @param hexColor The color in hex.
      */
     public data class UpdateStrokeColor(
         val id: String,
-        val colorInHex: String,
+        val hexColor: String,
     ) : Command()
 
     /**
      * Update the stroke width of a node.
      * @param id The id of the node.
-     * @param widthInPx The width in pixels.
+     * @param width The width in pixels.
      */
     public data class UpdateStrokeWidth(
         val id: String,
-        val widthInPx: Int,
+        val width: Int,
     ) : Command()
 
     /**
@@ -46,7 +46,7 @@ public sealed class Command {
      * Update the root background color.
      */
     public data class UpdateRootBackgroundColor(
-        val colorInHex: String,
+        val hexColor: String,
     ) : Command()
 
     /**
@@ -55,16 +55,16 @@ public sealed class Command {
      * be added at the same level of this elementId, so they will have the same parent node.
      * @param imageId The id of the new element to be added
      * @param imageUrl The url where the image is available
-     * @param widthInPx The width of the image in pixels
-     * @param heightInPx The height of the image in pixels
+     * @param width The width of the image in pixels
+     * @param height The height of the image in pixels
      * @param coordinate The coordinates where the image will be added
      */
     public data class AddRoundedImage(
         val elementId: String,
         val imageId: String,
         val imageUrl: String,
-        val widthInPx: Int,
-        val heightInPx: Int,
+        val width: Int,
+        val height: Int,
         val coordinate: NodeCoordinate
     ) : Command()
 }

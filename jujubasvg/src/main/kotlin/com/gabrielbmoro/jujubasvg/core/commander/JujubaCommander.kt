@@ -23,15 +23,15 @@ public class JujubaCommander {
     private fun convertToJSCode(command: Command): String {
         return when (command) {
             is Command.UpdateBackgroundColor -> {
-                "updateBackgroundColor(\'${command.id}\',\'${command.colorInHex}\');"
+                "updateBackgroundColor(\'${command.id}\',\'${command.hexColor}\');"
             }
 
             is Command.UpdateStrokeColor -> {
-                "updateStrokeColor(\'${command.id}\',\'${command.colorInHex}\');"
+                "updateStrokeColor(\'${command.id}\',\'${command.hexColor}\');"
             }
 
             is Command.UpdateStrokeWidth -> {
-                "updateStrokeWidth(\'${command.id}\',${command.widthInPx});"
+                "updateStrokeWidth(\'${command.id}\',${command.width});"
             }
 
             is Command.RemoveNode -> {
@@ -39,7 +39,7 @@ public class JujubaCommander {
             }
 
             is Command.UpdateRootBackgroundColor -> {
-                "updateRootBackgroundColor(\'${command.colorInHex}\');"
+                "updateRootBackgroundColor(\'${command.hexColor}\');"
             }
 
             is Command.AddRoundedImage -> {
@@ -47,8 +47,8 @@ public class JujubaCommander {
                         "\'${command.elementId}\'," +
                         "\'${command.imageId}\'," +
                         "\'${command.imageUrl}\'," +
-                        "\'${command.widthInPx}\'," +
-                        "\'${command.heightInPx}\'," +
+                        "\'${command.width}\'," +
+                        "\'${command.height}\'," +
                         "\'${command.coordinate.x}\'," +
                         "\'${command.coordinate.y}\'" +
                         ");"
