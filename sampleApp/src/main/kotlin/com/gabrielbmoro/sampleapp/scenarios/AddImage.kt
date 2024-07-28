@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.graphics.Color
 import com.gabrielbmoro.jujubasvg.core.JujubaSVG
 import com.gabrielbmoro.jujubasvg.core.commander.Command
 import com.gabrielbmoro.jujubasvg.core.rememberJujubaCommander
@@ -39,7 +40,7 @@ internal fun AddImage() {
                 }
             },
             commander = jujubaCommander,
-            backgroundColorInHex = "#ffb700",
+            backgroundColor = Color(0xffffb700),
             modifier = Modifier.fillMaxSize()
         )
     }
